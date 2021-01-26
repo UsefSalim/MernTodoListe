@@ -1,3 +1,27 @@
-body{
-  background: #000;
+.delete-btn {
+  margin-right: 0.5rem;
+}
+
+.fad-enter {
+  opacity: 0.01;
+}
+
+.fad-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in;
+}
+
+.fad-exit {
+  opacity: 1;
+}
+
+.fad-exit-active {
+  opacity: 0.01;
+  transition: opacity 1000ms ease-in;
+}
+
+.display {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
 }

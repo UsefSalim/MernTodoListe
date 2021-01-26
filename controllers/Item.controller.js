@@ -10,11 +10,12 @@ exports.getAll = async (req, res) => {
   //! .sort date:-1 pour avoir la DB en ordre decroissant
   try {
     const all = await Item.find().sort({ date: -1 })
-    if (all) res.status(200).json(all)
+    all && res.status(200).json(all)
   } catch (error) {
     res.status(400).json(err)
   }
 }
+
 
 /* ! @Route  : POST => api/item
      Desc    : Create Item
@@ -26,7 +27,7 @@ exports.addItem = async (req, res) => {
   })
   try {
     const addItem = await item.save()
-    if (addItem) res.status(201).json(item)
+    addItem && res.status(201).json(item)
   } catch (error) {
     res.status(400).json(err)
   }
